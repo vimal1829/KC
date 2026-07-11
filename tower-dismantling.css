@@ -111,9 +111,9 @@ body {
     animation: fadeIn 0.3s ease-in;
 }
 
-/* .content-section.active {
+.content-section.active {
     display: block;
-} */
+}
 
 @keyframes fadeIn {
     from {
@@ -299,6 +299,7 @@ body {
 
     .nav-menu{
         gap: 0.3rem;
+        justify-content: space-between;
     }
 
     .nav-link{
@@ -325,14 +326,9 @@ body {
 ========================= */
 @media (max-width: 768px){
 
-    .navbar{
-        padding: 0.6rem 0;
-    }
-
+ /* Navbar */
     .nav-container{
-        display: flex;
         justify-content: space-between;
-        align-items: center;
         position: relative;
     }
 
@@ -340,23 +336,18 @@ body {
         width: 65px;
     }
 
-    /* Hamburger Button */
     .menu-toggle{
         display: block;
     }
 
-    /* Mobile Menu */
     .nav-menu{
+        display: none;
+        flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
         background-color: white;
-
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-
         padding: 1rem 0;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         gap: 0;
@@ -368,30 +359,41 @@ body {
 
     .nav-menu li{
         width: 100%;
+        text-align: center;
     }
 
     .nav-link{
-        width: 100%;
         display: block;
-        padding: 12px 20px;
-        font-size: 15px;
+        width: 100%;
+        padding: 14px 20px;
         border-radius: 0;
+        font-size: 15px;
     }
 
     .nav-link:hover{
         background-color: #f5f5f5;
     }
+
+
     /* Main Content */
     .main-content{
         padding: 1.5rem 15px;
     }
 
+    .section-header{
+        margin-bottom: 1.5rem;
+    }
+
     .section-header h1{
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .section-content{
         padding: 1.2rem;
+    }
+
+    .section-content p{
+        font-size: 15px;
     }
 
     .section-content ul{
@@ -400,6 +402,8 @@ body {
 }
 
 
+
+   
 /* =========================
    Small Mobile View
 ========================= */
@@ -414,7 +418,7 @@ body {
     }
 
     .section-header h1{
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 
     .section-content{
@@ -424,6 +428,12 @@ body {
     .section-content p,
     .section-content li{
         font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .nav-link{
+        font-size: 14px;
+        padding: 12px;
     }
 }
 

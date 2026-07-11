@@ -214,120 +214,102 @@ body {
     font-size:16px;
 }
 
-/* =========================
-   MODAL
-========================= */
-.modal{
-    display:none;
-    position:fixed;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.5);
-    z-index:2000;
+/* ==================================
+   MORE PROJECTS SECTION
+================================== */
+
+.more-projects{
+    margin-top:60px;
+    padding:50px 30px;
+    background:#ffffff;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
 
-.modal.active{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.modal-content{
-    background:#fff;
-    width:90%;
-    max-width:500px;
-    padding:2rem;
-    border-radius:10px;
-    position:relative;
-    max-height:90vh;
-    overflow-y:auto;
-}
-
-.close{
-    position:absolute;
-    top:10px;
-    right:15px;
-    font-size:28px;
-    cursor:pointer;
-}
-
-.modal-content h2{
-    margin-bottom:1.5rem;
+.more-projects h2{
+    font-size:2rem;
     color:#2c3e50;
+    margin-bottom:20px;
 }
 
-/* =========================
-   FORM
-========================= */
-.form-group{
-    margin-bottom:1.2rem;
+.more-projects p{
+    max-width:850px;
+    margin:0 auto 18px;
+    color:#555;
+    line-height:1.8;
+    font-size:16px;
 }
 
-.form-group label{
-    display:block;
-    margin-bottom:.5rem;
+.insta-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-top:15px;
+    padding:14px 28px;
+    background:#E1306C;
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    font-size:16px;
     font-weight:600;
+    transition:.3s;
 }
 
-.form-group input,
-.form-group textarea,
-.form-group select{
-    width:100%;
-    padding:12px;
-    border:1px solid #ddd;
-    border-radius:5px;
-    font-size:15px;
+.insta-btn i{
+    font-size:20px;
 }
 
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus{
-    outline:none;
-    border-color:#3498db;
-    box-shadow:0 0 0 2px rgba(52,152,219,.2);
+.insta-btn:hover{
+    background:#c91d5c;
+    transform:translateY(-3px);
 }
 
-.form-actions{
-    display:flex;
-    justify-content:flex-end;
-    gap:1rem;
-    margin-top:1.5rem;
+/* Tablet */
+@media(max-width:768px){
+
+    .more-projects{
+        padding:35px 20px;
+    }
+
+    .more-projects h2{
+        font-size:1.6rem;
+    }
+
+    .more-projects p{
+        font-size:15px;
+    }
+
+    .insta-btn{
+        width:100%;
+        justify-content:center;
+    }
+
 }
 
-.btn-primary,
-.btn-secondary{
-    border:none;
-    cursor:pointer;
-    border-radius:5px;
-    padding:12px 18px;
-    font-size:15px;
+/* Small Mobile */
+@media(max-width:480px){
+
+    .more-projects{
+        padding:30px 15px;
+    }
+
+    .more-projects h2{
+        font-size:1.4rem;
+    }
+
+    .more-projects p{
+        font-size:14px;
+    }
+
+    .insta-btn{
+        font-size:14px;
+        padding:12px 18px;
+    }
+
 }
 
-.btn-primary{
-    background:#3498db;
-    color:#fff;
-}
 
-.btn-primary:hover{
-    background:#2980b9;
-}
-
-.btn-secondary{
-    background:#95a5a6;
-    color:#fff;
-}
-
-.btn-secondary:hover{
-    background:#7f8c8d;
-}
-
-.error-message{
-    color:#e74c3c;
-    margin-top:10px;
-    display:none;
-}
 
 /* ===========================
    FOOTER
@@ -685,4 +667,81 @@ justify-content:center;
     .service-card h3 { font-size: 1.1rem; }
     .nav-link { font-size: 14px; }
     .logo img { width: 55px; }
+}
+
+/* =========================
+   PROJECT IMAGES - TABLET
+========================= */
+@media screen and (max-width: 992px){
+
+    .project-card img{
+        height:220px;
+    }
+
+    .project-content{
+        padding:18px;
+    }
+
+    .project-content h3{
+        font-size:20px;
+    }
+
+}
+
+/* =========================
+   PROJECT IMAGES - MOBILE
+========================= */
+@media screen and (max-width: 768px){
+
+    .project-card img{
+        width:100%;
+        height:200px;
+        object-fit:cover;
+    }
+
+    .project-card{
+        padding:15px;
+    }
+
+    .project-content{
+        padding:15px;
+    }
+
+    .project-content h3{
+        font-size:18px;
+    }
+
+    .location,
+    .date,
+    .description{
+        font-size:14px;
+    }
+
+}
+
+/* =========================
+   PROJECT IMAGES - SMALL MOBILE
+========================= */
+@media screen and (max-width: 480px){
+
+    .project-card img{
+        width:100%;
+        height:180px;
+        object-fit:cover;
+    }
+
+    .project-content{
+        padding:12px;
+    }
+
+    .project-content h3{
+        font-size:17px;
+    }
+
+    .location,
+    .date,
+    .description{
+        font-size:13px;
+    }
+
 }

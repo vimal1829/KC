@@ -137,22 +137,19 @@ body {
 /* CONTACT PAGE */
 
 .contact-container{
-    display:grid;
-    grid-template-columns:2fr 1fr;
-    grid-template-areas: "form info";
-    gap:40px;
+    display:flex;
+    justify-content:center;
     margin-top:40px;
 }
 
-.contact-form,
 .contact-info{
     background:#fff;
     padding:35px;
     border-radius:10px;
     box-shadow:0 2px 12px rgba(0,0,0,.1);
-}
-.contact-form{
-    grid-area:form;
+    width:100%;
+    max-width:700px;
+
 }
 
 .contact-info{
@@ -165,53 +162,6 @@ body {
     margin-bottom:25px;
 }
 
-.form-group{
-    margin-bottom:20px;
-}
-
-.form-group label{
-    display:block;
-    margin-bottom:8px;
-    font-weight:600;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea{
-    width:100%;
-    padding:12px 15px;
-    border:1px solid #ddd;
-    border-radius:6px;
-    font-size:15px;
-    outline:none;
-    transition:.3s;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus{
-    border-color:#3498db;
-}
-
-textarea{
-    resize:vertical;
-}
-
-.btn{
-    background:#3498db;
-    color:#fff;
-    border:none;
-    padding:14px 30px;
-    border-radius:6px;
-    cursor:pointer;
-    font-size:16px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn:hover{
-    background:#217dbb;
-}
 
 .info-box{
     display:flex;
@@ -235,37 +185,6 @@ textarea{
     color:#666;
 }
 
-@media(max-width:992px){
-
-.contact-container{
-    grid-template-columns:1fr;
-    grid-template-areas:
-        "info"
-        "form";
-}
-
-.contact-form,
-.contact-info{
-    width:100%;
-}
-
-}
-
-@media(max-width:768px){
-
-.contact-container{
-    grid-template-columns:1fr;
-    grid-template-areas:
-        "info"
-        "form";
-}
-
-.contact-form,
-.contact-info{
-    width:100%;
-}
-
-}
 
 /* ===========================
    FOOTER
@@ -489,4 +408,286 @@ justify-content:center;
     .service-card h3 { font-size: 1.1rem; }
     .nav-link { font-size: 14px; }
     .logo img { width: 55px; }
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+@media screen and (max-width:1200px){
+
+    .nav-link{
+        font-size:15px;
+        padding:8px 10px;
+    }
+
+    .logo img{
+        width:70px;
+    }
+
+    .main-content{
+        padding:2rem 25px;
+    }
+
+    .contact-container{
+        gap:30px;
+    }
+
+    .contact-form,
+    .contact-info{
+        padding:30px;
+    }
+
+    .section-header h1{
+        font-size:2rem;
+    }
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+@media screen and (max-width:992px){
+
+    /* Navbar */
+
+    .menu-toggle{
+        display:block;
+        margin-left:auto;
+    }
+
+    .nav-container{
+        position:relative;
+    }
+
+    .nav-menu{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#fff;
+        box-shadow:0 4px 10px rgba(0,0,0,.1);
+        padding:15px 0;
+    }
+
+    .nav-menu.active{
+        display:flex;
+    }
+
+    .nav-menu li{
+        width:100%;
+        text-align:center;
+    }
+
+    .nav-link{
+        display:block;
+        width:100%;
+        padding:14px;
+        border-radius:0;
+    }
+
+    /* Contact */
+
+    .contact-container{
+        justify-content:center;
+    }
+
+    .contact-info{
+        padding:30px;
+        width: 100%;
+    }
+
+    .section-header{
+        text-align:center;
+    }
+
+    .section-header h1{
+        font-size:2rem;
+    }
+
+    .section-header p{
+        font-size:15px;
+    }
+
+    /* Footer */
+
+    .footer-container{
+        grid-template-columns:repeat(2,1fr);
+        gap:30px;
+    }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+@media screen and (max-width:768px){
+
+    .navbar{
+        padding:.6rem 0;
+    }
+
+    .logo img{
+        width:60px;
+    }
+
+    .main-content{
+        padding:20px 15px;
+    }
+
+    .section-header h1{
+        font-size:1.8rem;
+    }
+
+    .section-header p{
+        font-size:14px;
+    }
+
+    .contact-info{
+        padding:22px;
+    }
+
+    .contact-info h2{
+        font-size:24px;
+    }
+
+    .form-group label{
+        font-size:15px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+        font-size:14px;
+        padding:12px;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .info-box{
+        gap:12px;
+    }
+
+    .info-box i{
+        font-size:22px;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .footer-logo{
+        justify-content:center;
+    }
+
+    .social-icons{
+        justify-content:center;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .footer-links{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+@media screen and (max-width:480px){
+
+    .logo img{
+        width:55px;
+    }
+
+    .menu-toggle{
+        font-size:1.5rem;
+    }
+
+    .main-content{
+        padding:15px 10px;
+    }
+
+    .section-header h1{
+        font-size:1.5rem;
+    }
+
+    .section-header p{
+        font-size:13px;
+    }
+
+    .contact-info{
+        padding:18px;
+    }
+
+    .contact-info h2{
+        font-size:20px;
+    }
+
+    .form-group{
+        margin-bottom:16px;
+    }
+
+    .form-group label{
+        font-size:14px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+        padding:10px;
+        font-size:13px;
+    }
+
+    .btn{
+        padding:12px;
+        font-size:14px;
+    }
+
+    .info-box{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:8px;
+    }
+
+    .info-box i{
+        font-size:20px;
+    }
+
+    .info-box h3{
+        font-size:17px;
+    }
+
+    .info-box p{
+        font-size:13px;
+    }
+
+    .footer-logo img{
+        width:55px;
+    }
+
+    .footer-logo h2{
+        font-size:22px;
+    }
+
+    .footer-col h3{
+        font-size:20px;
+    }
+
+    .footer-col p,
+    .footer-col li,
+    .footer-links a{
+        font-size:14px;
+    }
+
 }
